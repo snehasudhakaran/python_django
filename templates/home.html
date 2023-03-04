@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            sneha
+        </title>
+    </head>
+    <body>
+        {% block content %}
+        <form action="product" method="POST">
+            {% csrf_token %}
+            {% comment %} <h1>Product</h1>
+            <label for="mob"> Mobile </label>
+            <input id="mob" name="mobile" type="text"><br>
+            <label for="desk">Desktop</label>
+            <input id="desk" name="desktop" type="text">
+            <br>
+            <input type="submit" value="submit"> {% endcomment %}
+            <table style="border:1px solid #ddd;padding:30px;display:block;margin:auto;width:22%;margin-top:50px;">
+                <tr>
+                    <td colspan="2" style="text-align:center;"><h3>USER details</h3></td>
+                </tr>
+                <tr>
+                    <td style="padding:7px;">Name</td>
+                    <td> <input type="text" name="firstname" > </td>
+                </tr>
+                <tr>
+                    <td style="padding:7px;">Password</td>
+                    <td><input type="password" name="pwd"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align:right;"><input type="Submit" value="submit"></td>
+                </tr>
+            </table>
+        </form>
+        {% endblock %}
+    </body>
+</html>
